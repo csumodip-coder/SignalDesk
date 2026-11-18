@@ -265,4 +265,4 @@ def analyse_price_action(
 __all__ = [
     "CandlePattern", "PriceLevel", "PriceActionResult",
     "detect_candle_patterns", "find_support_resistance", "analyse_price_action",
-]
+]

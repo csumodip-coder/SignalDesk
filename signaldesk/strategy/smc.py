@@ -306,4 +306,4 @@ def timeframe_confluence(results: dict[str, SMCResult]) -> dict:
 
 __all__ = ["Swing", "StructureEvent", "LiquiditySweep", "FairValueGap",
            "OrderBlock", "SMCResult", "find_swings", "analyse_smc",
-           "timeframe_confluence"]
+           "timeframe_confluence"]

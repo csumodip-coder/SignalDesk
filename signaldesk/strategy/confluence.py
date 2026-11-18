@@ -147,7 +147,7 @@ def enrich_signals_with_smc_pa(
             except Exception as exc:
                 failures.append(f"{signal.symbol} {tf}: {exc}")
         if evidence:
-            signal.confluence.extend([f"SMC/PA evidence â€” {line}" for line in evidence])
+            signal.confluence.extend([f"SMC/PA evidence — {line}" for line in evidence])
         else:
             signal.confluence.append("SMC/PA evidence unavailable: insufficient or invalid OHLCV history")
 
@@ -222,12 +222,12 @@ def append_market_intelligence(
         if symbol_evidence:
             analysed += 1
             disclosures.append(
-                f"MARKET INTELLIGENCE â€” {symbol}: "
+                f"MARKET INTELLIGENCE — {symbol}: "
                 + "; ".join(symbol_evidence[:8])
             )
         else:
             disclosures.append(
-                f"MARKET INTELLIGENCE â€” {symbol}: insufficient usable "
+                f"MARKET INTELLIGENCE — {symbol}: insufficient usable "
                 "OHLCV history for SMC/PA analysis."
             )
 
@@ -240,4 +240,4 @@ def append_market_intelligence(
     if failures:
         disclosures.append(
             "Market intelligence analysis errors: " + "; ".join(failures[:8])
-        )
+        )
